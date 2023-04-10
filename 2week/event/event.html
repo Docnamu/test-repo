@@ -1,0 +1,98 @@
+<html lang="en">
+<head>
+    <meta charset="UTF-8">
+    <meta http-equiv="X-UA-Compatible" content="IE=edge">
+    <meta name="viewport" content="width=device-width, initial-scale=1.0">
+    <title>Document</title>
+    <style>
+        #grand{width: 360px; height: 160px; margin: 5px; padding: 5px; background-color: blue; color: white; }
+        #parent{width: 250px; margin: 10px; padding: 5px; background-color: white; color: black; }
+        #grand{width: 200px; height: 40px; margin: 5px; padding: 5px; background-color: teal; color: white;}
+    </style>
+</head>
+<body>
+    <!-- <p ondblclick="showResponse()">안녕하세요~</p> -->
+    <!-- 더블클릭 발생시 이 함수 실행 -->
+    <!-- <input type="button" value="mseg" onclick="showMessage()">
+    <input type="button" value="resp" onclick="myevent()"> -->
+    <!-- <script>
+        function showResponse() {console.log("답변 그래용");}
+        function showMessage() {console.log("또 대답 ㅁㄴㅇㄹ");}
+        function myevent() {document.write("어쩔티비")}
+    </script> -->
+
+<p id="greetings">하용</p>
+<input id="message" type="button" value="OK">
+<input id="removeListener" type="button" value=" 연결해제 텍스트">
+<script>
+    function greetings() {console.log("그리팅");}
+    function message() {console.log("메세지")}
+    function releaseListener(){
+        pElem.removeEventListener("dblclick", greetings, false);
+        inputElem.removeEventListener("click", message, false);
+        console.log("연결해제 완료")
+    }
+
+    let pElem = document.getElementById('greetings');
+    let inputElem = document.getElementById('message');
+    let removeListener = document.getElementById('removeListener');
+
+    pElem.addEventListener("dblclick", ()=> {console.log("답변 1 ㅁㄴㅇㄹ"); } , false );
+    inputElem.addEventListener("click", ()=> { console.log("ekqqus2 asdf"); } , false);
+    removeListener.addEventListener("click", releaseListener, false);
+</script>
+<br />+++++++++++++++++++<br> " "
+
+<!-- 위랑 이거랑 같은데 이런 방식을 좀더 많이쓰는편 화살표도 쓰고 -->
+<!-- 근데 왜 연결해제가 적용안대지 나중에 체크 -->
+
+<div id="grand" onclick="handle_event(event)">
+    grandparent
+    <div id="parent" onclick="handle_event(event)">
+        parent
+        <button id="child" onclick="handle_event(event)"> child </button>
+    </div>
+</div>
+<script>
+    function handle_event(e){
+console.log(`handle_event target : ${e.target.id} ` +
+`currentTarget : ${e.currentTarget.id}` );
+    }
+</script>
+<!-- 따옴표 말고 물결 그거 쓸때는 텍스트랑 변수랑 같이 쓸때 한꺼번에 묶어서 -->
+<!-- 신호를 위로 뻠삥해주는거 -->
+
+<div class="container">
+    <img src="gomchi.png" width="300px" onmouseover="mouseover_Func(event)" onmousemove="mousemove_Func(event)"
+    onmousenter="mouseenter_Func(event)" onmouseout="mouseout_Func(event)"
+    ondblclick="dblclick_Func(event)" name="Gomchi">
+
+    <img src="golaming.png" width="300px" onmousemove="mousemove_Func(event)"
+    onmouseenter="mouseenter_Func(event)" onmouseout="mouseout_Func(event)"
+    ondblclick="dblclick_Func(event)" name="Golaming">
+
+    <div class="result">mouse 입벤트</div>
+</div>
+
+<script>
+    function mousemove_Func(event) {result_Func(event)}
+    function mouseenter_Func(event) {result_Func(event)}
+    function mouseout_Func(event) {result_Func(event)}
+    function mouseover_Func(event) {result_Func(event)}
+    function dblclick_Func(event) {result_Func(event)}   
+// 마우스 오버는 호버랑 같은건데 자바에선 마우스 오버라고 한다 무브랑 오버는같이 작동하고있으니 무브만 나옴
+
+function result_Func(e){
+    let result = document.querySelector('.result');
+    if(e.type !== "mouseout"){
+        result.innerText = 'event : ' + e.type +',' + e.target.name;
+        result.style.display="block";
+    }
+    else{
+        result.style.display="none"
+    }
+}
+</script>
+
+</body>
+</html>

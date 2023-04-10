@@ -1,0 +1,79 @@
+<html lang="en">
+<head>
+    <meta charset="UTF-8">
+    <meta http-equiv="X-UA-Compatible" content="IE=edge">
+    <meta name="viewport" content="width=device-width, initial-scale=1.0">
+    <title>Document</title>
+<link rel="stylesheet" href="css/4_6_3d.css">
+<style>
+    /* 컨테이너는 쩜 안붙으니까 안대넹 */
+    .container{border-style: solid;}
+    .container div{background-color: teal; color: white; margin: 10px;}
+html{font-size: 30px;}
+/* .none {color: teal;}
+    .h-shadow{text-shadow: 2px 0 blue;}
+    .v-shadow{text-shadow: 2px 2px blue;}
+    .blur-radius{text-shadow: 2px 2px 2px teal}
+    .shadow-color{text-shadow: -5px -5px red} */
+
+</style>
+</head>
+<body>
+    <p> 캬오오 </p>
+    <p style="color:pink; font-style: normal;"> 쿠와아악 </p>
+    
+    <div class="container" style="font-size: 20px;">
+        <div style="font-size: 1.5em;">em은 parent 따라서</div>
+        <div style="font-size: 1.5rem;">rem은 html 따라서</div>
+        <div>이건 그냥쓴거</div>
+    </div>
+
+    <p>결국은 순서 따라간다
+        직접 지정해준놈이 젤 쎄고
+        그다음은 html위에서 정해준 스타일이고
+        가장 밑바탕이 css
+    </p>
+        <div style="color: blueviolet; font-family: 'Times New Roman', Times, serif;"> selector은 어떻게 쓰지</div>
+        <div class="none"> noneshadow</div>
+        <div class="h-shadow"> hshadow</div>
+        <div class="v-shadow"> vshadow</div>
+        <div class="blur-radius"> shadow</div>
+        <div class="shadow-color"> shadow</div>
+
+<div id="naeyong"> 셀렉터 쓴거</div>
+
+<div style="margin: 1rem; padding: .6rem; border: 3px dotted teal; display: inline-flexbox;">center west
+    east
+    west
+    east</div>
+
+    <!-- 페수도클래스 -->
+<a href="https://www.tripadvisor.co.kr">tripadvisor</a><br /><br />
+<div>베네치아 베니스</div>
+
+<table>
+    <tr>
+        <th>item</th>
+        <th>quantity</th>
+        <th>price</th>
+    </tr>
+    <tr>
+        <td>구왁</td>
+        <td>guak</td>
+        <td>kuak</td>
+    </tr>
+    <tr>
+        <td>a</td>
+        <td>b</td>
+        <td>c</td>
+        <td>d</td>
+    </tr>
+    <tr>
+        <td>1</td>
+        <td>2</td>
+        <td>3</td>
+    </tr>
+</table>
+
+</body>
+</html>

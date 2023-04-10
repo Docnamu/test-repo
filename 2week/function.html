@@ -1,0 +1,69 @@
+<html lang="en">
+<head>
+    <meta charset="UTF-8">
+    <meta http-equiv="X-UA-Compatible" content="IE=edge">
+    <meta name="viewport" content="width=device-width, initial-scale=1.0">
+    <title>Document</title>
+</head>
+<body>
+    <script>
+        function noparanoreturn(){
+            alert("반가워용");
+        }
+
+        noparanoreturn();
+
+        function paranoreturn(nameinput){
+            document.write(nameinput + ", 로그인 ㅊㅋ" + "<br />");
+        }
+
+        paranoreturn("곽1")
+        paranoreturn("곽2")
+        paranoreturn("곽3")
+
+        function parareturn(name, amount){
+            if(amount <0){
+                message ="amount는 숫자입력"
+            }
+            else {
+                message = name + " 님 " + amount + " 입금 완";
+            }
+            return message;
+        }
+        document.write(parareturn('닥나무',300000));
+    </script>
+<script>
+    //애로우함수 그냥 바로 정의
+    const arrowfunc = (inputput) => {alert(inputput)}
+    arrowfunc("바로 정의")
+</script>
+
+<script>
+    const current_Date = () => {
+        let curr_Date = new Date().toISOString();
+        return curr_Date;
+    }
+
+    let returnDate = current_Date();
+    document.write("Current Date : " + returnDate)
+</script>
+
+<script>
+    function longestName(){
+        let longest_name = "";
+
+        for(let i=0; i < arguments.length; i++) {
+            if(arguments[i].length > longest_name.length){
+                longest_name = arguments[i];
+            }
+        }
+        return longest_name
+    }
+
+document.write("<br />" + "입력된 데이터 중 가장 긴 이름 : " +
+longestName("소나무", "자작나무", "히말라야시다", "리지나뿌리썩음병"));
+
+</script>
+
+</body>
+</html>

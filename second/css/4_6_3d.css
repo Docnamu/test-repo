@@ -1,0 +1,50 @@
+body {color: black;
+background-color: yellowgreen;
+font-size: 20pt;}
+
+p{
+color: darkgreen;
+font-style: italic;
+}
+
+a{
+    color: white;
+    padding: 1rem;
+    margin: 1rem;
+
+}
+
+a:link{background-color: teal;}
+a:hover {
+    color:red;
+    background-color: blue;
+    text-decoration: underline;
+}
+div:hover{
+    margin-top: 1.2rem;
+    background-color: teal;
+    font-size: 1.5rem;
+    color: white;
+}
+/* 호버 */
+/* psuedo class 종류 hover link visit focus 등 */
+
+div{
+    width: 400px;
+    /* overflow: scroll; */
+    /* 텍스트오버플로도 있음 */
+    /* 셀렉터 */
+}
+#naeyong {color:red; font-size: 1.2rem;}
+
+.none {color: teal;}
+    .h-shadow{text-shadow: 2px 0 blue;}
+    .v-shadow{text-shadow: 2px 2px blue;}
+    .blur-radius{text-shadow: 2px 2px 2px teal}
+    .shadow-color{text-shadow: -5px -5px red}
+
+    :root{background-color: green;}
+    table{border-collapse: collapse; color: white;}
+    table, th, td {border: 1px solid white; padding: .5rem;}
+    th{font-size: 1.4rem;}
+    tr:nth-child(3){font-size: 1.2rem; font-weight: bolder;}

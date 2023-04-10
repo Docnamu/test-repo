@@ -1,0 +1,66 @@
+<html lang="en">
+<head>
+    <meta charset="UTF-8">
+    <meta http-equiv="X-UA-Compatible" content="IE=edge">
+    <meta name="viewport" content="width=device-width, initial-scale=1.0">
+    <title>Document</title>
+    <button id="result">바뀌기 전 text</button>
+</head>
+<body>
+    <script>
+
+        let bought = true;
+        // let bought = false;
+
+        if(bought){
+            document.write('예약돼ㅑㅆ냐 안됐냐'+"<br />")
+        }
+        else if (bought === false){document.write ("안됐을걸")}
+
+        // let member = ["소나무", 35, "경상북도청", "경북 포항시 어쩌구 주소"];
+        // for (let i in member) {
+        //     console.log(member[i])
+        // }
+
+        </script>
+
+        <script>
+        let yourDate = new Date();
+        let curr_day = yourDate.getDate();
+        let curr_month = yourDate.getMonth();
+        curr_month++; //1월이 0부터 시작 취급이라 ++ 해줘야함
+        let curr_year = yourDate.getFullYear();
+        var count = 1;
+
+        document.write(yourDate + "<br />");
+        //한글로 받는법 찾아보자
+
+        while(count < 6) {
+            document.write(curr_month + "/" + curr_day + "/" + curr_year + "<br />");
+            count++
+        }
+
+    </script>
+
+
+
+    <script>
+        const mode = document.getElementById("result");
+        let text = "" ;
+        let i = 0;
+        mode.addEventListener("click", function() {
+        if (i < 10) {
+            if(i === 3) {
+            text += "계속 추가되는 값으로 덮어쓰기 되는듯";
+            // continue;
+            }
+            text = text + i;
+            i++
+            document.getElementById("result").innerHTML = text;
+        }
+    })
+        
+    </script>
+
+</body>
+</html>

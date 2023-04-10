@@ -1,0 +1,66 @@
+<html lang="en">
+<head>
+    <meta charset="UTF-8">
+    <meta http-equiv="X-UA-Compatible" content="IE=edge">
+    <meta name="viewport" content="width=device-width, initial-scale=1.0">
+    <title>Document</title>
+    <style>
+        div{padding: 1rem;}
+        .world {
+            color: black;
+            background-color: pink;
+        }
+        .world > .country{
+            background-color: tomato;
+        }
+        .world .capital {
+            color: greenyellow;
+        background-color: white;
+        }
+        .country:nth-of-type(3) + div{color: skyblue;}
+        .country:nth-of-type(1) ~ div{color: purple;}
+
+/* .하면 자손 모두에게 적용
+> 하면 자식에만 적용
++ 하면 그것만 적용
+~ 하면 그 번호 이후 다 적용 */
+
+span{width: 200px;}
+div{color:white; margin:5px; padding: 10px;
+border:1px solid black ; border-radius: 10px;}
+.none {background-color: teal; display: none;width: 200px; height: 400px;}
+.inline {background-color: blue; display: inline; width: 200px; height: 400px;}
+.inline-block {background-color: #ff8f00; display: inline-block; width: 200px; height: 400px;}
+.block {background-color: red; display: block; width: 200px; height: 400px;}
+    </style>
+</head>
+<body>
+    
+<div class="world">
+    world
+    <div class="country">
+        England
+        <div class="capital"> London</div>
+    </div>
+    <div class="country">Korea
+        <div class="capital"> seoul</div>
+        </div>
+        <div class="country"> japan
+        <div class="capital"> tokyo</div>
+        </div>
+        <div class="country">sonamu
+        <div class="capital"> qyuak</div>
+        </div>
+</div>
+<hr><hr><hr><hr><hr>
+
+<span>스팬이랑 디브 차이는 스팬은 작게잡고</span>
+<span>asdf</span>
+<hr>
+<div class ="none"> 없음 </div>
+<div class ="inline"> 디브는 한문단 다먹고 </div>
+<div class ="inline-block"> 따로 쓰면 블럭형태지 </div>
+<div class ="block"> 근데 글쎄 </div>
+
+</body>
+</html>
